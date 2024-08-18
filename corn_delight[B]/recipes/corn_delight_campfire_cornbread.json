@@ -1,0 +1,14 @@
+{
+    "format_version": "1.17",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "corn_delight:campfire_cornbread"
+        },
+        "input": "corn_delight:cornbread_batter",
+        "output": "corn_delight:cornbread",
+        "tags": [
+            "campfire",
+            "soul_campfire"
+        ]
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "corn_delight:popcorn_box",
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.miscFood"
+            },
+            "states": {
+                "corn_delight:popcorn_box": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('corn_delight:popcorn_box') == 0",
+                "components": {
+                    "minecraft:geometry": "geometry.popcorn_box_stage0"
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:popcorn_box') == 1",
+                "components": {
+                    "minecraft:geometry": "geometry.popcorn_box_stage1",
+                    "minecraft:loot": "loot_tables/corn_delight/popcorn_box.json"
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:popcorn_box') == 2",
+                "components": {
+                    "minecraft:geometry": "geometry.popcorn_box_stage2",
+                    "minecraft:loot": "loot_tables/corn_delight/popcorn_box.json"
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:popcorn_box') == 3",
+                "components": {
+                    "minecraft:geometry": "geometry.popcorn_box_stage3",
+                    "minecraft:loot": "loot_tables/corn_delight/popcorn_box.json"
+                }
+            }
+        ],
+        "components": {
+            "minecraft:custom_components": [
+                "corn_delight:popcorn_box"
+            ],
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.0
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.1
+            },
+            "minecraft:geometry": "geometry.popcorn_box_stage0",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "popcorn",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    12,
+                    10
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    12,
+                    10
+                ]
+            }
+        }
+    }
+}

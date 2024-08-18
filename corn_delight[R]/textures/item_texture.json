@@ -1,0 +1,69 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        "wild_corn": {
+            "textures": "textures/blocks/wild_corn"
+        },
+        "tortilla_raw": {
+            "textures": "textures/items/tortilla_raw"
+        },
+        "tortilla_chip": {
+            "textures": "textures/items/tortilla_chip"
+        },
+        "tortilla": {
+            "textures": "textures/items/tortilla"
+        },
+        "taco": {
+            "textures": "textures/items/taco"
+        },
+        "popcorn": {
+            "textures": "textures/items/popcorn"
+        },
+        "nachos_bowl": {
+            "textures": "textures/items/nachos_bowl"
+        },
+        "nachos_block": {
+            "textures": "textures/items/nachos_block"
+        },
+        "grilled_corn": {
+            "textures": "textures/items/grilled_corn"
+        },
+        "creamy_corn_drink": {
+            "textures": "textures/items/creamy_corn_drink"
+        },
+        "creamed_corn": {
+            "textures": "textures/items/creamed_corn"
+        },
+        "corn_soup": {
+            "textures": "textures/items/corn_soup"
+        },
+        "corn_seeds": {
+            "textures": "textures/items/corn_seeds"
+        },
+        "corn_dog": {
+            "textures": "textures/items/corn_dog"
+        },
+        "cornbread_stuffing": {
+            "textures": "textures/items/cornbread_stuffing"
+        },
+        "cornbread_batter": {
+            "textures": "textures/items/cornbread_batter"
+        },
+        "cornbread": {
+            "textures": "textures/items/cornbread"
+        },
+        "corn": {
+            "textures": "textures/items/corn"
+        },
+        "classic_corn_dog": {
+            "textures": "textures/items/classic_corn_dog"
+        },
+        "caramel_popcorn": {
+            "textures": "textures/items/caramel_popcorn"
+        },
+        "boiled_corn": {
+            "textures": "textures/items/boiled_corn"
+        }
+    },
+    "texture_name": "atlas.items"
+}

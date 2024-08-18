@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "components": {
+      "minecraft:use_modifiers": {
+          "use_duration": 1.6
+      },
+      "minecraft:food": {
+          "nutrition": 1,
+          "saturation_modifier": 0.1,
+          "can_always_eat": false
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:icon": {
+        "textures": {
+          "default": "tortilla_chip"
+        }
+      },
+      "minecraft:tags": {
+        "tags": [
+          "farmersdelight:can_cut.tag.farmersdelight:is_knife"
+        ]
+      }
+    },
+    "description": {
+      "identifier": "corn_delight:tortilla_chip",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.miscFood"
+      }
+    }
+  }
+}

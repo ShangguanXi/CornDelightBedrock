@@ -1,0 +1,23 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:block_placer": {
+        "block": "corn_delight:nachos_block"
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "nachos_block"
+        }
+      }
+    },
+    "description": {
+      "identifier": "corn_delight:nachos_block_item",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.miscFood"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "corn_delight:corn_kernel_bag",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "rice_bag_side"
+                },
+                "west": {
+                    "texture": "rice_bag_side_tied"
+                },
+                "up": {
+                    "texture": "corn_kernal_bag_top"
+                },
+                "down": {
+                    "texture": "rice_bag_bottom"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.3
+            },
+            "minecraft:geometry": "geometry.block",
+            "tag:farmersdelight:straw_blocks":{}
+        }
+    }
+}

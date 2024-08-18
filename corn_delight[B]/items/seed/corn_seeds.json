@@ -1,0 +1,41 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "components": {
+      "minecraft:use_modifiers": {
+          "use_duration": 1.6
+      },
+      "minecraft:food": {
+          "nutrition": 0.5,
+          "saturation_modifier": 0.4,
+          "can_always_eat": false
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:icon": {
+        "textures": {
+          "default": "corn_seeds"
+        }
+      },
+      "minecraft:block_placer": {
+        "block": "corn_delight:corn_crop",
+        "use_on": [
+          "farmland",
+          "farmersdelight:rich_soil_farmland"
+        ]
+      },
+      "minecraft:tags": {
+        "tags": [
+          "farmersdelight:is_fertilizer.35",
+          "farmersdelight:can_cook"
+        ]
+      }
+    },
+    "description": {
+      "identifier": "corn_delight:corn_seeds",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.seed"
+      }
+    }
+  }
+}

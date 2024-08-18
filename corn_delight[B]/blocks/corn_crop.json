@@ -1,0 +1,448 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "corn_delight:corn_crop",
+            "menu_category": {
+                "category": "none"
+            },
+            "states": {
+                "corn_delight:growth": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "corn_delight:upper": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('corn_delight:growth') == 0 && query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage0",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            4,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 1&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_crop/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage1",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            8,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 2&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage2",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            12,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 3&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage3",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 4&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage4",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 5&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage5",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 6&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage6",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 7&& query.block_state('corn_delight:upper') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop_full.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_crop_stage7",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 0 && query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage0",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            4,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 1&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_crop/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage1",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            8,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 2&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage2",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            12,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 3&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage3",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 4&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage4",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 5&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage5",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 6&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage6",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('corn_delight:growth') == 7&& query.block_state('corn_delight:upper') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/corn_delight/corn_crop_full.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "corn_top_stage7",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            16,
+                            14
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:custom_components": [
+                "corn_delight:corn"
+            ],
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.0
+            },
+            "minecraft:flammable": {
+                "catch_chance_modifier": 30,
+                "destroy_chance_modifier": 30
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.corn_crop",
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.0
+            },
+            "minecraft:collision_box": false,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "corn_delight:corn_crop",
+                            "minecraft:farmland",
+                            "farmersdelight:rich_soil_farmland"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "tag:crop": {},
+            "tag:max_growth:7": {},
+            "tag:growth_property:corn_delight:growth": {}
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        "wild_corn": {
+            "textures": "textures/blocks/wild_corn"
+        },
+        "popcorn": {
+            "textures": "textures/blocks/popcorn"
+        },
+        "nacho_top": {
+            "textures": "textures/blocks/nacho_top"
+        },
+        "nacho_side": {
+            "textures": "textures/blocks/nacho_side"
+        },
+        "nacho_inner": {
+            "textures": "textures/blocks/nacho_inner"
+        },
+        "corn_top_stage7": {
+            "textures": "textures/blocks/corn_top_stage7"
+        },
+        "corn_top_stage6": {
+            "textures": "textures/blocks/corn_top_stage6"
+        },
+        "corn_top_stage5": {
+            "textures": "textures/blocks/corn_top_stage5"
+        },
+        "corn_top_stage4": {
+            "textures": "textures/blocks/corn_top_stage4"
+        },
+        "corn_top_stage3": {
+            "textures": "textures/blocks/corn_top_stage3"
+        },
+        "corn_top_stage2": {
+            "textures": "textures/blocks/corn_top_stage2"
+        },
+        "corn_top_stage1": {
+            "textures": "textures/blocks/corn_top_stage1"
+        },
+        "corn_top_stage0": {
+            "textures": "textures/blocks/corn_top_stage0"
+        },
+        "corn_kernal_bag_top": {
+            "textures": "textures/blocks/corn_kernal_bag_top"
+        },
+        "corn_crop_stage7": {
+            "textures": "textures/blocks/corn_crop_stage7"
+        },
+        "corn_crop_stage6": {
+            "textures": "textures/blocks/corn_crop_stage6"
+        },
+        "corn_crop_stage5": {
+            "textures": "textures/blocks/corn_crop_stage5"
+        },
+        "corn_crop_stage4": {
+            "textures": "textures/blocks/corn_crop_stage4"
+        },
+        "corn_crop_stage3": {
+            "textures": "textures/blocks/corn_crop_stage3"
+        },
+        "corn_crop_stage2": {
+            "textures": "textures/blocks/corn_crop_stage2"
+        },
+        "corn_crop_stage1": {
+            "textures": "textures/blocks/corn_crop_stage1"
+        },
+        "corn_crop_stage0": {
+            "textures": "textures/blocks/corn_crop_stage0"
+        },
+        "corn_crate_top": {
+            "textures": "textures/blocks/corn_crate_top"
+        },
+        "corn_crate_side": {
+            "textures": "textures/blocks/corn_crate_side"
+        }
+    },
+    "texture_name": "atlas.terrain"
+}

@@ -1,0 +1,14 @@
+{
+    "format_version": "1.17",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "corn_delight:campfire_grilled_corn"
+        },
+        "input": "corn_delight:corn",
+        "output": "corn_delight:grilled_corn",
+        "tags": [
+            "campfire",
+            "soul_campfire"
+        ]
+    }
+}

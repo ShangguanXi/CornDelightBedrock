@@ -1,0 +1,21 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "corn_delight:wild_corn_feature"
+        },
+        "places_block": "corn_delight:wild_corn_block",
+        "enforce_survivability_rules": true,
+        "enforce_placement_rules": false,
+        "may_attach_to": {
+            "bottom": [
+                {
+                    "name": "minecraft:grass"
+                }
+            ]
+        },
+        "may_replace": [
+            "minecraft:air"
+        ]
+    }
+}

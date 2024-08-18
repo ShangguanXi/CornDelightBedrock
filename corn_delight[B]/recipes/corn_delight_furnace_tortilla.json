@@ -1,0 +1,13 @@
+{
+    "format_version": "1.17",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "corn_delight:furnace_tortilla"
+        },
+        "input": "corn_delight:tortilla_raw",
+        "output": "corn_delight:tortilla",
+        "tags": [
+            "furnace"
+        ]
+    }
+}

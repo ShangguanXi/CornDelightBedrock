@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "corn_delight:wild_corn_feature_rules",
+			"places_feature": "corn_delight:scatter_wild_corn_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "overworld"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "overworld_generation"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+            "scatter_chance": 5.0,
+            "coordinate_eval_order": "xzy",
+            "x": 0,
+            "y": 0,
+            "z": 0
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "corn_delight:tortilla_raw"
+        },
+        "key": {
+            "b": {
+                "item": "minecraft:water_bucket"
+            },
+            "w": {
+                "item": "corn_delight:corn"
+            }
+        },
+        "pattern": [
+            "www",
+            " b "
+        ],
+        "result": {
+            "count": 3,
+            "item": "corn_delight:tortilla_raw"
+        },
+        "tags": [
+            "crafting_table"
+        ]
+    }
+}

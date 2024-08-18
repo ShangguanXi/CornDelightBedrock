@@ -1,0 +1,22 @@
+{
+    "format_version": [
+      1,
+      1,
+      0
+    ],
+    "corn_delight:corn_crop": {
+        "sound": "grass"
+    },
+    "corn_delight:wild_corn": {
+        "sound": "grass"
+    },
+    "corn_delight:corn_crate": {
+        "sound": "wood"
+    },
+    "corn_delight:corn_kernel_bag": {
+        "sound": "cloth"
+    },
+    "corn_delight:nachos_block": {
+        "sound": "cloth"
+    }
+}

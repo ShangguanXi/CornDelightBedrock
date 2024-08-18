@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "corn_delight:taco"
+        },
+        "ingredients": [
+            {
+                "item": "corn_delight:tortilla"
+            },
+            {
+                "tag": "farmersdelight:is_cabbage"
+            },
+            {
+                "tag": "farmersdelight:is_onion"
+            },
+            {
+                "tag": "minecraft:is_cooked"
+            }
+        ],
+        "result": {
+            "item": "corn_delight:taco"
+        },
+        "tags": [
+            "crafting_table"
+        ]
+    }
+}

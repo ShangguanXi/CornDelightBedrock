@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "corn_delight:cornbread_batter"
+        },
+        "ingredients": [
+            {
+                "item": "corn_delight:corn"
+            },
+            {
+                "item": "corn_delight:corn"
+            },
+            {
+                "item": "farmersdelight:milk_bottle"
+            },
+            {
+                "item": "minecraft:egg"
+            }
+        ],
+        "result": {
+            "count": 3,
+            "item": "corn_delight:cornbread_batter"
+        },
+        "tags": [
+            "crafting_table"
+        ]
+    }
+}

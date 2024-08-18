@@ -1,0 +1,13 @@
+{
+    "format_version": "1.17",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "corn_delight:smoker_popcorn"
+        },
+        "input": "corn_delight:corn_seeds",
+        "output": "corn_delight:popcorn",
+        "tags": [
+            "smoker"
+        ]
+    }
+}
