@@ -16,21 +16,22 @@ export class PopCornBox {
         const player = args.player;
         const dimension = args.dimension;
         const location = args.block.location;
-        if (typeId != "corn_delight:popcorn_box")
-            return;
-        if (player.getGameMode() == "creative")
-            return;
-        const selectedItem = player?.getComponent("inventory")?.container?.getSlot(player.selectedSlotIndex).getItem();
-        if (!selectedItem)
-            return;
-        const silkTouch = selectedItem.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
-        if (!silkTouch)
-            return;
-        args.cancel = true;
-        dimension.runCommandAsync(`/fill ${location.x} ${location.y} ${location.z} ${location.x} ${location.y} ${location.z} air destroy`);
-        system.runTimeout(() => {
-            ItemAPI.damage(player, player.selectedSlotIndex, 1);
-        });
+        if (typeId == "corn_delight:popcorn_box") {
+            if (player.getGameMode() == "creative")
+                return;
+            const selectedItem = player?.getComponent("inventory")?.container?.getSlot(player.selectedSlotIndex).getItem();
+            if (!selectedItem)
+                return;
+            const silkTouch = selectedItem.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
+            if (!silkTouch)
+                return;
+            args.cancel = true;
+            dimension.runCommandAsync(`/fill ${location.x} ${location.y} ${location.z} ${location.x} ${location.y} ${location.z} air destroy`);
+            system.runTimeout(() => {
+                ItemAPI.damage(player, player.selectedSlotIndex, 1);
+            });
+        }
+        ;
     }
 }
 __decorate([
