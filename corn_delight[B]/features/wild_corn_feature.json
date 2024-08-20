@@ -4,7 +4,7 @@
         "description": {
             "identifier": "corn_delight:wild_corn_feature"
         },
-        "places_block": "corn_delight:wild_corn_block",
+        "places_block": "corn_delight:wild_corn",
         "enforce_survivability_rules": true,
         "enforce_placement_rules": false,
         "may_attach_to": {
