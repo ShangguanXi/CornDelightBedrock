@@ -29,7 +29,7 @@
     ],
     "controls": [
       {
-        "boiled_corn@chest.cooking_pot_recipe": {
+        "boiled_corn@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             37.5,
@@ -41,7 +41,7 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "$cell0": "textures/items/corn",
                 "$result": "textures/items/boiled_corn"
               }
@@ -50,7 +50,7 @@
         }
       },
       {
-        "caramel_popcorn@chest.cooking_pot_recipe": {
+        "caramel_popcorn@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             -37.5,
@@ -62,7 +62,7 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "$cell0": "textures/items/corn",
                 "$cell1": "textures/items/sugar",
                 "$result": "textures/items/caramel_popcorn"
@@ -83,7 +83,7 @@
       1,
       1
     ],
-    "grid_item_template": "chest.corn_delight_recipe_part_0"
+    "grid_item_template": "cooking_pot.corn_delight_recipe_part_0"
   },
   "corn_delight_recipe_part_1": {
     "type": "panel",
@@ -93,7 +93,7 @@
     ],
     "controls": [
       {
-        "classic_corn_dog@chest.cooking_pot_recipe": {
+        "classic_corn_dog@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             37.5,
@@ -105,10 +105,10 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "controls": [
                   {
-                    "cell0@chest.cooked_meat": {
+                    "cell0@cooking_pot.cooked_meat": {
                       "type": "image",
                       "offset": [
                         -23,
@@ -183,7 +183,7 @@
         }
       },
       {
-        "chorus_fruit_wine@chest.cooking_pot_recipe": {
+        "chorus_fruit_wine@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             -37.5,
@@ -195,7 +195,7 @@
           ],
           "controls": [
             {
-              "cell0@chest.cooked_meat": {
+              "cell0@cooking_pot.cooked_meat": {
                 "offset": [
                   -23,
                   -7
@@ -263,7 +263,7 @@
       1,
       1
     ],
-    "grid_item_template": "chest.corn_delight_recipe_part_1"
+    "grid_item_template": "cooking_pot.corn_delight_recipe_part_1"
   },
   "corn_delight_recipe_part_2": {
     "type": "panel",
@@ -273,7 +273,7 @@
     ],
     "controls": [
       {
-        "corn_soup@chest.cooking_pot_recipe": {
+        "corn_soup@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             37.5,
@@ -285,7 +285,7 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "controls": [
                   {
                     "dumplings_anim": {
@@ -390,7 +390,7 @@
         }
       },
       {
-        "cornbread_stuffing@chest.cooking_pot_recipe": {
+        "cornbread_stuffing@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             -37.5,
@@ -402,7 +402,7 @@
           ],
           "controls": [
             {
-              "cell0@chest.vegetable_all": {
+              "cell0@cooking_pot.vegetable_all": {
                 "type": "image",
                 "offset": [
                   -23,
@@ -485,7 +485,7 @@
       1,
       1
     ],
-    "grid_item_template": "chest.corn_delight_recipe_part_2"
+    "grid_item_template": "cooking_pot.corn_delight_recipe_part_2"
   },
   "corn_delight_recipe_part_3": {
     "type": "panel",
@@ -495,7 +495,7 @@
     ],
     "controls": [
       {
-        "creamed_corn@chest.cooking_pot_recipe": {
+        "creamed_corn@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             37.5,
@@ -507,7 +507,7 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "$cell0": "textures/items/popcorn",
                 "$cell1": "textures/items/popcorn",
                 "$cell2": "textures/items/milk_bottle",
@@ -518,7 +518,7 @@
         }
       },
       {
-        "ender_sauce@chest.cooking_pot_recipe": {
+        "ender_sauce@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             -37.5,
@@ -530,7 +530,7 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "$cell0": "textures/items/corn",
                 "$cell1": "textures/items/sugar",
                 "$cell2": "textures/items/milk_bottle",
@@ -552,7 +552,7 @@
       1,
       1
     ],
-    "grid_item_template": "chest.corn_delight_recipe_part_3"
+    "grid_item_template": "cooking_pot.corn_delight_recipe_part_3"
   },
   "corn_delight_recipe_part_4": {
     "type": "panel",
@@ -562,7 +562,7 @@
     ],
     "controls": [
       {
-        "nachos_block_item@chest.cooking_pot_recipe": {
+        "nachos_block_item@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             37.5,
@@ -574,10 +574,10 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "controls": [
                   {
-                    "cell0@chest.cooked_meat": {
+                    "cell0@cooking_pot.cooked_meat": {
                       "type": "image",
                       "offset": [
                         -23,
@@ -666,7 +666,7 @@
         }
       },
       {
-        "stuffed_pumpkin@chest.cooking_pot_recipe": {
+        "stuffed_pumpkin@cooking_pot.cooking_pot_recipe": {
           "texture": "textures/gui/recipe/cooking_recipe",
           "offset": [
             -37.5,
@@ -678,10 +678,10 @@
           ],
           "controls": [
             {
-              "cooking_pot_recipe_cell@chest.cooking_pot_recipe_cell": {
+              "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
                 "controls": [
                   {
-                    "cell0@chest.vegetable_all": {
+                    "cell0@cooking_pot.vegetable_all": {
                       "type": "image",
                       "offset": [
                         -23,
@@ -795,7 +795,7 @@
       1,
       1
     ],
-    "grid_item_template": "chest.corn_delight_recipe_part_4"
+    "grid_item_template": "cooking_pot.corn_delight_recipe_part_4"
   },
   "recipe_grid_panel": {
     "modifications": [
@@ -804,19 +804,19 @@
         "operation": "insert_back",
         "value": [
           {
-            "corn_delight_recipe_grid_0@chest.corn_delight_recipe_grid_0": {}
+            "corn_delight_recipe_grid_0@cooking_pot.corn_delight_recipe_grid_0": {}
           },
           {
-            "corn_delight_recipe_grid_1@chest.corn_delight_recipe_grid_1": {}
+            "corn_delight_recipe_grid_1@cooking_pot.corn_delight_recipe_grid_1": {}
           },
           {
-            "corn_delight_recipe_grid_2@chest.corn_delight_recipe_grid_2": {}
+            "corn_delight_recipe_grid_2@cooking_pot.corn_delight_recipe_grid_2": {}
           },
           {
-            "corn_delight_recipe_grid_3@chest.corn_delight_recipe_grid_3": {}
+            "corn_delight_recipe_grid_3@cooking_pot.corn_delight_recipe_grid_3": {}
           },
           {
-            "corn_delight_recipe_grid_4@chest.corn_delight_recipe_grid_4": {}
+            "corn_delight_recipe_grid_4@cooking_pot.corn_delight_recipe_grid_4": {}
           }
         ]
       }
