@@ -3,12 +3,12 @@
   "minecraft:item": {
     "components": {
       "minecraft:use_modifiers": {
-          "use_duration": 1.6
+        "use_duration": 1.6
       },
       "minecraft:food": {
-          "nutrition": 0.5,
-          "saturation_modifier": 0.4,
-          "can_always_eat": false
+        "nutrition": 0.5,
+        "saturation_modifier": 0.4,
+        "can_always_eat": false
       },
       "minecraft:use_animation": "eat",
       "minecraft:icon": {
