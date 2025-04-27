@@ -4,7 +4,7 @@
             "uuid": "9fb21388-ddc7-48e9-8a0a-4ee89f80a490",
             "version": [
                 3,
-                1,
+                2,
                 0
             ]
         }
@@ -15,13 +15,13 @@
         "min_engine_version": [
             1,
             21,
-            40
+            70
         ],
         "name": "pack.name",
         "uuid": "f58f0770-2752-4ba3-91ce-12a36ba17b9b",
         "version": [
             3,
-            1,
+            2,
             0
         ]
     },
@@ -37,7 +37,7 @@
             "uuid": "e4448eb7-4dea-4f77-bb05-bb18fc2af10c",
             "version": [
                 3,
-                1,
+                2,
                 0
             ]
         }

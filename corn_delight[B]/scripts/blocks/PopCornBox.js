@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { ItemComponentTypes, PlayerBreakBlockBeforeEvent, system, world } from "@minecraft/server";
+import { EntityComponentTypes, ItemComponentTypes, PlayerBreakBlockBeforeEvent, system, world } from "@minecraft/server";
 import { EventAPI } from "../lib/EventAPI";
 import { ItemAPI } from "../lib/ItemAPI";
 export class PopCornBox {
@@ -19,10 +19,10 @@ export class PopCornBox {
         if (typeId == "corn_delight:popcorn_box") {
             if (player.getGameMode() == "creative")
                 return;
-            const selectedItem = player?.getComponent("inventory")?.container?.getSlot(player.selectedSlotIndex).getItem();
+            const selectedItem = player?.getComponent(EntityComponentTypes.Inventory)?.container?.getSlot(player.selectedSlotIndex).getItem();
             if (!selectedItem)
                 return;
-            const silkTouch = selectedItem.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
+            const silkTouch = selectedItem?.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
             if (!silkTouch)
                 return;
             args.cancel = true;

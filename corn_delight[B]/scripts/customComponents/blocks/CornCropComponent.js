@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { WorldInitializeBeforeEvent, world, EntityInventoryComponent, system } from "@minecraft/server";
+import { WorldInitializeBeforeEvent, world, system, EntityComponentTypes } from "@minecraft/server";
 import { ItemAPI } from "../../lib/ItemAPI";
 import { EventAPI } from "../../lib/EventAPI";
 function spawnLoot(path, dimenion, location) {
@@ -21,15 +21,17 @@ class CropsComponent {
     onPlayerInteract(args) {
         const block = args.block;
         const player = args.player;
+        if (!player)
+            return;
         const dimension = args.dimension;
-        const itemId = player?.getComponent("inventory")?.container?.getSlot(player.selectedSlotIndex).typeId;
+        const itemId = player?.getComponent(EntityComponentTypes.Inventory)?.container?.getSlot(player.selectedSlotIndex).typeId;
         const age = Number(block.permutation.getState("corn_delight:growth"));
         const upper = Boolean(block.permutation.getState("corn_delight:upper"));
         const topLocation = { x: block.location.x, y: block.location.y + 1, z: block.location.z };
         const random = Math.floor(Math.random() * 101);
         if (!player)
             return;
-        const container = player.getComponent(EntityInventoryComponent.componentId)?.container;
+        const container = player?.getComponent(EntityComponentTypes.Inventory)?.container;
         const lootTable = this.getLootTable();
         try {
             if (itemId == "minecraft:bone_meal" && age < 7 && upper == false) {

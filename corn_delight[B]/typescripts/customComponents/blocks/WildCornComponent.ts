@@ -1,4 +1,4 @@
-import { Dimension, Vector3, BlockCustomComponent, BlockComponentPlayerInteractEvent, Container, EntityInventoryComponent, world, BlockComponentRandomTickEvent, WorldInitializeBeforeEvent, BlockComponentPlayerDestroyEvent, ItemComponentTypes } from "@minecraft/server";
+import { Dimension, Vector3, BlockCustomComponent, BlockComponentPlayerInteractEvent, Container, EntityInventoryComponent, world, BlockComponentRandomTickEvent, WorldInitializeBeforeEvent, BlockComponentPlayerDestroyEvent, ItemComponentTypes, EntityComponentTypes, ItemEnchantableComponent } from "@minecraft/server";
 import { ItemAPI } from "../../lib/ItemAPI";
 import { EventAPI } from "../../lib/EventAPI";
 
@@ -18,7 +18,7 @@ class WildCropComponent implements BlockCustomComponent {
         const player = args.player;
         const block = args.block;
         const dimension = args.dimension;
-        const container = player?.getComponent("inventory")?.container;
+        const container = (player?.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)?.container;
         const lootTable = this.getLootTable();
         const lootItem = this.lootItem();
         if (!player) return;
@@ -26,7 +26,7 @@ class WildCropComponent implements BlockCustomComponent {
         try {
             const selectedSlot = container?.getSlot(player.selectedSlotIndex)
             const itemId = selectedSlot.typeId;
-            const silkTouch = container?.getItem(player.selectedSlotIndex)?.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
+            const silkTouch = (container?.getItem(player.selectedSlotIndex)?.getComponent(ItemComponentTypes.Enchantable) as ItemEnchantableComponent)?.hasEnchantment("silk_touch");
             if (itemId == "minecraft:shears") {
                 ItemAPI.damage(player, player.selectedSlotIndex, 1)
                 ItemAPI.spawn(block, lootItem)

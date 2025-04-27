@@ -4,7 +4,8 @@
         "description": {
             "identifier": "corn_delight:corn_kernel_bag",
             "menu_category": {
-                "category": "items"
+                "category": "items",
+                "group": "farmersdelight:itemGroup.name.crate"
             }
         },
         "components": {

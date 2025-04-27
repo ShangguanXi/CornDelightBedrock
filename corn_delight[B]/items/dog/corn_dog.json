@@ -22,7 +22,7 @@
       "identifier": "corn_delight:corn_dog",
       "menu_category": {
         "category": "equipment",
-        "group": "itemGroup.name.miscFood"
+        "group": "farmersdelight:itemGroup.name.miscFood"
       }
     }
   }

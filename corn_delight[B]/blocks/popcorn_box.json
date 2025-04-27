@@ -5,7 +5,7 @@
             "identifier": "corn_delight:popcorn_box",
             "menu_category": {
                 "category": "equipment",
-                "group": "itemGroup.name.miscFood"
+                "group": "farmersdelight:itemGroup.name.miscFood"
             },
             "states": {
                 "corn_delight:popcorn_box": [

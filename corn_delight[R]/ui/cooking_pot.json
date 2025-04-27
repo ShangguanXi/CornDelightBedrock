@@ -63,7 +63,7 @@
           "controls": [
             {
               "cooking_pot_recipe_cell@cooking_pot.cooking_pot_recipe_cell": {
-                "$cell0": "textures/items/corn",
+                "$cell0": "textures/items/corn_seeds",
                 "$cell1": "textures/items/sugar",
                 "$result": "textures/items/caramel_popcorn"
               }

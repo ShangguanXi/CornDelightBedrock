@@ -1,4 +1,4 @@
-import { Block, Entity, GameMode, ItemStack, world } from "@minecraft/server";
+import { Block, Entity, EntityComponentTypes, GameMode, ItemStack, world } from "@minecraft/server";
 import { RandomAPI } from "./RandomAPI";
 export class ItemAPI {
     /**
@@ -9,7 +9,8 @@ export class ItemAPI {
      * @returns
      */
     static damage(player, slot, damage = 1) {
-        const container = player.getComponent("inventory")?.container;
+        const inventory = player.getComponent(EntityComponentTypes.Inventory);
+        const container = inventory.container;
         if (!container)
             return;
         const itemStack = container?.getItem(slot);
@@ -40,7 +41,8 @@ export class ItemAPI {
      * @returns
      */
     static replace(player, slot, newItemStack) {
-        const container = player.getComponent("inventory")?.container;
+        const inventory = player.getComponent(EntityComponentTypes.Inventory);
+        const container = inventory.container;
         if (!container)
             return;
         const itemStack = container?.getItem(slot);
@@ -50,8 +52,13 @@ export class ItemAPI {
         if (player.getGameMode() == GameMode.creative)
             return;
         const itemAmount = itemStack.amount;
-        itemStack.amount = itemAmount - 1;
-        container.setItem(slot, itemStack);
+        if (itemStack.amount == 1) {
+            container.setItem(slot, undefined);
+        }
+        else {
+            itemStack.amount = itemAmount - 1;
+            container.setItem(slot, itemStack);
+        }
     }
     /**
      *
@@ -61,7 +68,8 @@ export class ItemAPI {
      * @returns
      */
     static clear(player, slot, number = 1) {
-        const container = player.getComponent("inventory")?.container;
+        const inventory = player.getComponent(EntityComponentTypes.Inventory);
+        const container = inventory.container;
         if (!container)
             return;
         const itemStack = container?.getItem(slot);
@@ -71,6 +79,13 @@ export class ItemAPI {
             return;
         const itemAmount = itemStack.amount;
         itemStack.amount = itemAmount - number;
+        if (itemAmount == 1) {
+            container.setItem(slot, undefined);
+        }
+        else {
+            itemStack.amount = itemAmount - 1;
+            container.setItem(slot, itemStack);
+        }
         container.setItem(slot, itemStack);
     }
     /**
@@ -133,7 +148,8 @@ export class ItemAPI {
      * @returns
      */
     static add(player, item, number = 1) {
-        const container = player.getComponent("inventory")?.container;
+        const inventory = player.getComponent(EntityComponentTypes.Inventory);
+        const container = inventory.container;
         if (!container)
             return;
         if (item instanceof ItemStack) {

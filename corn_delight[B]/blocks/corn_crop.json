@@ -410,6 +410,13 @@
             }
         ],
         "components": {
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
             "minecraft:custom_components": [
                 "corn_delight:corn"
             ],

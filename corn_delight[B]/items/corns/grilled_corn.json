@@ -21,7 +21,7 @@
       "identifier": "corn_delight:grilled_corn",
       "menu_category": {
         "category": "equipment",
-        "group": "itemGroup.name.miscFood"
+        "group": "farmersdelight:itemGroup.name.miscFood"
       }
     }
   }

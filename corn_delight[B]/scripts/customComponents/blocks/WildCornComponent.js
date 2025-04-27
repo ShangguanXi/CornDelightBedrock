@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { world, WorldInitializeBeforeEvent, ItemComponentTypes } from "@minecraft/server";
+import { world, WorldInitializeBeforeEvent, ItemComponentTypes, EntityComponentTypes } from "@minecraft/server";
 import { ItemAPI } from "../../lib/ItemAPI";
 import { EventAPI } from "../../lib/EventAPI";
 function spawnLoot(path, dimenion, location) {
@@ -21,7 +21,7 @@ class WildCropComponent {
         const player = args.player;
         const block = args.block;
         const dimension = args.dimension;
-        const container = player?.getComponent("inventory")?.container;
+        const container = player?.getComponent(EntityComponentTypes.Inventory)?.container;
         const lootTable = this.getLootTable();
         const lootItem = this.lootItem();
         if (!player)

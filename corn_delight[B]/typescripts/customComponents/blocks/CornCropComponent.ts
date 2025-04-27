@@ -1,4 +1,4 @@
-import { BlockCustomComponent, BlockComponentPlayerInteractEvent, WorldInitializeBeforeEvent, world, Dimension, Vector3, BlockComponentRandomTickEvent, EntityInventoryComponent, Container, Direction, BlockComponentTickEvent, system } from "@minecraft/server";
+import { BlockCustomComponent, BlockComponentPlayerInteractEvent, WorldInitializeBeforeEvent, world, Dimension, Vector3, BlockComponentRandomTickEvent, EntityInventoryComponent, Container, Direction, BlockComponentTickEvent, system, EntityComponentTypes } from "@minecraft/server";
 import { ItemAPI } from "../../lib/ItemAPI";
 import { EventAPI } from "../../lib/EventAPI";
 function spawnLoot(path: string, dimenion: Dimension, location: Vector3) {
@@ -15,14 +15,15 @@ class CropsComponent implements BlockCustomComponent {
     onPlayerInteract(args: BlockComponentPlayerInteractEvent): void {
         const block = args.block;
         const player = args.player;
+        if (!player) return
         const dimension = args.dimension
-        const itemId = player?.getComponent("inventory")?.container?.getSlot(player.selectedSlotIndex).typeId
+        const itemId = (player?.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)?.container?.getSlot(player.selectedSlotIndex).typeId
         const age = Number(block.permutation.getState("corn_delight:growth"))
         const upper = Boolean(block.permutation.getState("corn_delight:upper"))
         const topLocation = { x: block.location.x, y: block.location.y + 1, z: block.location.z };
         const random = Math.floor(Math.random() * 101)
         if (!player) return;
-        const container: Container | undefined = player.getComponent(EntityInventoryComponent.componentId)?.container;
+        const container: Container | undefined = (player?.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)?.container;
         const lootTable = this.getLootTable();
         try {
             if (itemId == "minecraft:bone_meal" && age < 7 && upper == false) {

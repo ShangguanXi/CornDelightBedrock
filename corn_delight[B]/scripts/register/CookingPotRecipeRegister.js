@@ -9,12 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WorldInitializeAfterEvent, system, world } from "@minecraft/server";
 import { EventAPI } from "../lib/EventAPI";
+import { cookingPotRecipes } from "../data/CookingPotRecipes";
 let register = true;
 export class CookingPotRecipeRegister {
     register(args) {
         system.runInterval(() => {
             if (register) {
-                world.getDimension("overworld").runCommandAsync("function corn_delight/recipe_registries");
+                for (let i = 0; i < cookingPotRecipes.length; i++) {
+                    cookingPotRecipes[i];
+                    const recipe = JSON.stringify(cookingPotRecipes[i]);
+                    world.getDimension("overworld").runCommandAsync(`scriptevent farmersdelight:cooking_pot_recipe ${recipe}`);
+                }
                 register = false;
             }
         });
