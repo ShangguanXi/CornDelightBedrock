@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "corn_delight:nachos_block",
@@ -105,9 +105,8 @@
             }
         ],
         "components": {
-            "minecraft:custom_components": [
-                "farmersdelight:interact"
-            ],
+            "minecraft:geometry": "geometry.nachos_block_stage0",
+            "farmersdelight:interact": {},
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 1.0
             },
@@ -159,8 +158,7 @@
                     14.0
                 ]
             },
-            "tag:farmersdelight.blockfood:4-item.minecraft:bowl": {},
-            "tag:farmersdelight:blockfood": {}
+            "tag:farmersdelight.blockfood:4-item.minecraft:bowl": {}
         }
     }
 }

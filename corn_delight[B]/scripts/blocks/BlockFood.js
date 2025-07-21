@@ -7,31 +7,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { EntityComponentTypes, ItemComponentTypes, PlayerBreakBlockBeforeEvent, system, world } from "@minecraft/server";
+import { world, PlayerBreakBlockBeforeEvent, system, GameMode } from "@minecraft/server";
 import { EventAPI } from "../lib/EventAPI";
 import { ItemAPI } from "../lib/ItemAPI";
-export class PopCornBox {
+export class BlockFood {
     break(args) {
-        const typeId = args.block.typeId;
         const player = args.player;
-        const dimension = args.dimension;
-        const location = args.block.location;
-        if (typeId == "corn_delight:popcorn_box") {
-            if (player.getGameMode() == "creative")
-                return;
-            const selectedItem = player?.getComponent(EntityComponentTypes.Inventory)?.container?.getSlot(player.selectedSlotIndex).getItem();
-            if (!selectedItem)
-                return;
-            const silkTouch = selectedItem?.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
-            if (!silkTouch)
-                return;
-            args.cancel = true;
-            dimension.runCommandAsync(`/fill ${location.x} ${location.y} ${location.z} ${location.x} ${location.y} ${location.z} air destroy`);
+        if (player.getGameMode() == GameMode.Creative)
+            return;
+        const block = args.block;
+        if (block.typeId != "corn_delight:nachos_block")
+            return;
+        const stage = block.permutation.getState("farmersdelight:food_block_stage");
+        if (stage != 0) {
             system.runTimeout(() => {
-                ItemAPI.damage(player, player.selectedSlotIndex, 1);
+                block.dimension.setBlockType(block.location, "minecraft:air");
+                ItemAPI.damage(player, player.selectedSlotIndex);
+                block.dimension.playSound("dig.stone", block.location);
             });
+            args.cancel = true;
         }
-        ;
     }
 }
 __decorate([
@@ -39,5 +34,5 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [PlayerBreakBlockBeforeEvent]),
     __metadata("design:returntype", void 0)
-], PopCornBox.prototype, "break", null);
-//# sourceMappingURL=PopCornBox.js.map
+], BlockFood.prototype, "break", null);
+//# sourceMappingURL=BlockFood.js.map

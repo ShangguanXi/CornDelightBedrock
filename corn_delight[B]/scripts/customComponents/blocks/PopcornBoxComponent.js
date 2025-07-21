@@ -7,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { WorldInitializeBeforeEvent, world } from "@minecraft/server";
+import { system, StartupEvent, EntityComponentTypes, GameMode, ItemComponentTypes, PlayerBreakBlockBeforeEvent, world } from "@minecraft/server";
 import { ItemAPI } from "../../lib/ItemAPI";
 import { EventAPI } from "../../lib/EventAPI";
-class PopCornBoxComponent {
+export class PopCornBoxComponent {
     constructor() {
         this.onPlayerInteract = this.onPlayerInteract.bind(this);
     }
@@ -28,16 +28,42 @@ class PopCornBoxComponent {
             ItemAPI.spawn(block, "minecraft:paper", 1);
         }
     }
-}
-export class PopCornBoxComponentRegister {
     register(args) {
         args.blockComponentRegistry.registerCustomComponent('corn_delight:popcorn_box', new PopCornBoxComponent());
     }
+    break(args) {
+        const typeId = args.block.typeId;
+        const player = args.player;
+        const dimension = args.dimension;
+        const location = args.block.location;
+        if (typeId == "corn_delight:popcorn_box") {
+            if (player.getGameMode() == GameMode.Creative)
+                return;
+            const selectedItem = player?.getComponent(EntityComponentTypes.Inventory)?.container?.getSlot(player.selectedSlotIndex).getItem();
+            if (!selectedItem)
+                return;
+            const silkTouch = selectedItem?.getComponent(ItemComponentTypes.Enchantable)?.hasEnchantment("silk_touch");
+            if (!silkTouch)
+                return;
+            args.cancel = true;
+            dimension.runCommand(`/fill ${location.x} ${location.y} ${location.z} ${location.x} ${location.y} ${location.z} air destroy`);
+            system.runTimeout(() => {
+                ItemAPI.damage(player, player.selectedSlotIndex, 1);
+            });
+        }
+        ;
+    }
 }
 __decorate([
-    EventAPI.register(world.beforeEvents.worldInitialize),
+    EventAPI.register(system.beforeEvents.startup),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [WorldInitializeBeforeEvent]),
+    __metadata("design:paramtypes", [StartupEvent]),
     __metadata("design:returntype", void 0)
-], PopCornBoxComponentRegister.prototype, "register", null);
+], PopCornBoxComponent.prototype, "register", null);
+__decorate([
+    EventAPI.register(world.beforeEvents.playerBreakBlock),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [PlayerBreakBlockBeforeEvent]),
+    __metadata("design:returntype", void 0)
+], PopCornBoxComponent.prototype, "break", null);
 //# sourceMappingURL=PopcornBoxComponent.js.map

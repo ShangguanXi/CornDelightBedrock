@@ -1,11 +1,11 @@
-import { BlockCustomComponent, BlockComponentPlayerInteractEvent, WorldInitializeBeforeEvent, world, Dimension, Vector3, BlockComponentRandomTickEvent, EntityInventoryComponent, Container, Direction, BlockComponentTickEvent, system, EntityComponentTypes } from "@minecraft/server";
+import { BlockCustomComponent, BlockComponentPlayerInteractEvent, StartupEvent, world, Dimension, Vector3, BlockComponentRandomTickEvent, EntityInventoryComponent, Container, Direction, BlockComponentTickEvent, system, GameMode } from "@minecraft/server";
 import { ItemAPI } from "../../lib/ItemAPI";
 import { EventAPI } from "../../lib/EventAPI";
 function spawnLoot(path: string, dimenion: Dimension, location: Vector3) {
     return dimenion.runCommand(`loot spawn ${location.x} ${location.y} ${location.z} loot "${path}"`)
 }
 
-class CropsComponent implements BlockCustomComponent {
+export class CropsComponent implements BlockCustomComponent {
 
     constructor() {
         this.onPlayerInteract = this.onPlayerInteract.bind(this);
@@ -15,20 +15,19 @@ class CropsComponent implements BlockCustomComponent {
     onPlayerInteract(args: BlockComponentPlayerInteractEvent): void {
         const block = args.block;
         const player = args.player;
-        if (!player) return
         const dimension = args.dimension
-        const itemId = (player?.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)?.container?.getSlot(player.selectedSlotIndex).typeId
+        const itemId = player?.getComponent("inventory")?.container?.getSlot(player.selectedSlotIndex).typeId
         const age = Number(block.permutation.getState("corn_delight:growth"))
         const upper = Boolean(block.permutation.getState("corn_delight:upper"))
         const topLocation = { x: block.location.x, y: block.location.y + 1, z: block.location.z };
         const random = Math.floor(Math.random() * 101)
         if (!player) return;
-        const container: Container | undefined = (player?.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)?.container;
+        const container: Container | undefined = player.getComponent(EntityInventoryComponent.componentId)?.container;
         const lootTable = this.getLootTable();
         try {
             if (itemId == "minecraft:bone_meal" && age < 7 && upper == false) {
-                world.playSound("item.bone_meal.use", block.location)
-                if (player?.getGameMode() == "creative") {
+                block.dimension.playSound("item.bone_meal.use", block.location)
+                if (player?.getGameMode() == GameMode.Creative) {
                     block.dimension.spawnParticle("minecraft:crop_growth_emitter", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
                     block.setPermutation(block.permutation.withState("corn_delight:growth", 7))
                     if (dimension.getBlock(topLocation)?.typeId=="minecraft:air"){
@@ -51,8 +50,8 @@ class CropsComponent implements BlockCustomComponent {
                 }
             }
             if (itemId == "minecraft:bone_meal" && age < 7 && upper == true) {
-                world.playSound("item.bone_meal.use", block.location)
-                if (player?.getGameMode() == "creative") {
+                block.dimension.playSound("item.bone_meal.use", block.location)
+                if (player?.getGameMode() == GameMode.Creative) {
                     block.dimension.spawnParticle("minecraft:crop_growth_emitter", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
                     block.setPermutation(block.permutation.withState("corn_delight:growth", 7))
                 }
@@ -66,8 +65,8 @@ class CropsComponent implements BlockCustomComponent {
                 }
             }
             if (itemId == "minecraft:bone_meal" && age == 7 && upper == false) {
-                world.playSound("item.bone_meal.use", block.location)
-                if (player?.getGameMode() == "creative") {
+                block.dimension.playSound("item.bone_meal.use", block.location)
+                if (player?.getGameMode() == GameMode.Creative) {
                     block.dimension.spawnParticle("minecraft:crop_growth_emitter", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
                     if (dimension.getBlock(topLocation)?.typeId=="minecraft:air"){
                         dimension.setBlockType(topLocation, "corn_delight:corn_crop")
@@ -123,11 +122,8 @@ class CropsComponent implements BlockCustomComponent {
         return "corn_delight/corn_crop_full";
 
     }
-
-}
-export class CornComponentRegister {
-    @EventAPI.register(world.beforeEvents.worldInitialize)
-    register(args: WorldInitializeBeforeEvent) {
+    @EventAPI.register(system.beforeEvents.startup)
+    register(args: StartupEvent) {
         args.blockComponentRegistry.registerCustomComponent('corn_delight:corn', new CropsComponent());
     }
 

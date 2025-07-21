@@ -1,12 +1,8 @@
 
-import { PopCornBox } from "./blocks/PopCornBox";
-import { CornComponentRegister } from "./customComponents/blocks/CornCropComponent";
-import { PopCornBoxComponentRegister } from "./customComponents/blocks/PopcornBoxComponent";
-import { WildCornComponentRegister } from "./customComponents/blocks/WildCornComponent";
+import { CropsComponent } from "./customComponents/blocks/CornCropComponent";
+import { PopCornBoxComponent } from "./customComponents/blocks/PopcornBoxComponent";
 import { CookingPotRecipeRegister } from "./register/CookingPotRecipeRegister";
 
 new CookingPotRecipeRegister();
-new WildCornComponentRegister();
-new CornComponentRegister();
-new PopCornBoxComponentRegister();
-new PopCornBox();
+new CropsComponent();
+new PopCornBoxComponent();

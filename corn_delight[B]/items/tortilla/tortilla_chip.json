@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.80",
+  "format_version": "1.21.90",
   "minecraft:item": {
     "components": {
       "minecraft:use_modifiers": {
@@ -16,10 +16,15 @@
           "default": "tortilla_chip"
         }
       },
-      "minecraft:tags": {
-        "tags": [
-          "farmersdelight:can_cut.tag.farmersdelight:is_knife"
-        ]
+      "farmersdelight:cuttable": {
+        "loot": [
+          ["corn_delight:tortilla_chip", 1,0.5],
+          ["corn_delight:tortilla_chip",3]
+        ],
+        "tool": {
+          "type": "tag",
+          "name": "farmersdelight:is_knife"
+        }
       }
     },
     "description": {
