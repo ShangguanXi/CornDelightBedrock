@@ -3,9 +3,9 @@
         {
             "uuid": "f58f0770-2752-4ba3-91ce-12a36ba17b9b",
             "version": [
-                4,
+                5,
                 0,
-                0
+                1
             ]
         },
         {
@@ -18,15 +18,15 @@
         "description": "pack.description",
         "min_engine_version": [
             1,
-            21,
-            70
+            26,
+            0
         ],
         "name": "pack.name",
         "uuid": "9fb21388-ddc7-48e9-8a0a-4ee89f80a490",
         "version": [
-            4,
+            5,
             0,
-            0
+            1
         ]
     },
     "metadata": {
@@ -41,9 +41,9 @@
             "type": "data",
             "uuid": "f697b6d7-bdc3-48ad-9bc3-97a09637621c",
             "version": [
-                4,
+                5,
                 0,
-                0
+                1
             ]
         },
         {
@@ -52,9 +52,9 @@
             "language": "javascript",
             "uuid": "c8290459-77f9-1f71-be52-f38c9e18abb0",
             "version": [
-                4,
+                5,
                 0,
-                0
+                1
             ],
             "entry": "scripts/main.js"
         }

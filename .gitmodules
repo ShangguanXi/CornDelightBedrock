@@ -1,0 +1,4 @@
+[submodule "FarmersDelightBedrock"]
+	path = FarmersDelightBedrock
+	url = https://github.com/ShangguanXi/FarmersDelightBedrock.git
+	branch = 26.0+

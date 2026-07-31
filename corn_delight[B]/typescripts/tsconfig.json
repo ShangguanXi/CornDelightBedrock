@@ -6,7 +6,7 @@
   "compilerOptions": {
     "allowJs": true,
     "target": "ES2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "module": "ES2020",
     "declaration": false,
     "noLib": false,
@@ -23,7 +23,14 @@
     "noImplicitUseStrict": false,
     "outDir": "../scripts",
     "rootDir": "../typescripts",
-    "baseUrl": "behavior_packs/",
+    "paths": {
+      "@minecraft/server": [
+        "C:/Users/Administrator/AppData/Roaming/npm/node_modules/@minecraft/server"
+      ],
+      "@minecraft/vanilla-data": [
+        "C:/Users/Administrator/AppData/Roaming/npm/node_modules/@minecraft/vanilla-data"
+      ]
+    },
     "listFiles": false,
   },
   "compileOnSave": false

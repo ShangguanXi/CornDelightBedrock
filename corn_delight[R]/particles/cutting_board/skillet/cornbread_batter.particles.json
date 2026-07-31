@@ -45,7 +45,7 @@
                 "material": "particles_alpha", 
                 "texture": "textures/items/cornbread_batter"
             }, 
-            "identifier": "farmersdelight:skillet_cornbread_batter"
+            "identifier": "corn_delight:skillet_cornbread_batter"
         }
     }
 }

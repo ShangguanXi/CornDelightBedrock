@@ -53,7 +53,7 @@
                 "material": "particles_alpha", 
                 "texture": "textures/items/tortilla_raw"
             }, 
-            "identifier": "farmersdelight:stove_tortilla_raw"
+            "identifier": "corn_delight:stove_tortilla_raw"
         }
     }
 }

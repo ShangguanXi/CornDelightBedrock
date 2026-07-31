@@ -53,7 +53,7 @@
                 "material": "particles_alpha", 
                 "texture": "textures/items/corn_seeds"
             }, 
-            "identifier": "farmersdelight:stove_corn_seeds"
+            "identifier": "corn_delight:stove_corn_seeds"
         }
     }
 }

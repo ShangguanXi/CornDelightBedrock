@@ -45,7 +45,7 @@
                 "material": "particles_alpha", 
                 "texture": "textures/items/tortilla_raw"
             }, 
-            "identifier": "farmersdelight:skillet_tortilla_raw"
+            "identifier": "corn_delight:skillet_tortilla_raw"
         }
     }
 }

@@ -10,19 +10,6 @@
         "saturation_modifier": 0.4,
         "can_always_eat": false
       },
-      "farmersdelight:cuttable": {
-        "loot": [
-          ["farmersdelight:straw", 1],
-          ["corn_delight:corn_seeds",2]
-        ],
-        "tool": {
-          "type": "tag",
-          "name": "farmersdelight:is_knife"
-        }
-      },
-      "farmersdelight:cookable": {
-        "result": "corn_delight:grilled_corn"
-      },
       "minecraft:use_animation": "eat",
       "minecraft:icon": {
         "textures": {

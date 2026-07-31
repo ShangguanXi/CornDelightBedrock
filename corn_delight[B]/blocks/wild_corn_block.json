@@ -13,11 +13,11 @@
                 "explosion_resistance": 0.1
             },
             "farmersdelight:wild_crop": {},
-            "minecraft:geometry": "geometry.wild_crop",
+            "minecraft:geometry": "minecraft:geometry.cross",
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wild_corn",
-                    "render_method": "alpha_test"
+                    "render_method": "alpha_test_single_sided"
                 }
             },
             "minecraft:liquid_detection": {

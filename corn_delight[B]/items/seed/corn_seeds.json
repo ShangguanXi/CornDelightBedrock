@@ -17,9 +17,6 @@
         }
       },
       "farmersdelight:seed": "corn_delight:corn_crop",
-      "farmersdelight:cookable": {
-        "result": "corn_delight:popcorn"
-      },
       "minecraft:block_placer": {
         "block": "corn_delight:corn_crop",
         "use_on": [

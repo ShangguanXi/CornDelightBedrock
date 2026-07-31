@@ -53,7 +53,7 @@
                 "material": "particles_alpha", 
                 "texture": "textures/items/cornbread_batter"
             }, 
-            "identifier": "farmersdelight:stove_cornbread_batter"
+            "identifier": "corn_delight:stove_cornbread_batter"
         }
     }
 }

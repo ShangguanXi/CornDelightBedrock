@@ -45,7 +45,7 @@
                 "material": "particles_alpha", 
                 "texture": "textures/items/corn_seeds"
             }, 
-            "identifier": "farmersdelight:skillet_corn_seeds"
+            "identifier": "corn_delight:skillet_corn_seeds"
         }
     }
 }

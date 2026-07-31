@@ -15,16 +15,6 @@
         "textures": {
           "default": "tortilla_chip"
         }
-      },
-      "farmersdelight:cuttable": {
-        "loot": [
-          ["corn_delight:tortilla_chip", 1,0.5],
-          ["corn_delight:tortilla_chip",3]
-        ],
-        "tool": {
-          "type": "tag",
-          "name": "farmersdelight:is_knife"
-        }
       }
     },
     "description": {

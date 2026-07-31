@@ -15,11 +15,7 @@
         "textures": {
           "default": "tortilla_raw"
         }
-      },
-      "farmersdelight:cookable": {
-        "result": "corn_delight:tortilla"
       }
-      
     },
     "description": {
       "identifier": "corn_delight:tortilla_raw",

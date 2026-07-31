@@ -15,9 +15,6 @@
         "textures": {
           "default": "cornbread_batter"
         }
-      },
-      "farmersdelight:cookable": {
-        "result": "corn_delight:cornbread"
       }
     },
     "description": {
